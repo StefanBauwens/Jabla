@@ -14,7 +14,7 @@ public class CameraController : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
         targetPos = new Vector3(followTarget.transform.position.x, followTarget.transform.position.y, transform.position.z); // z gets default value because it can't have same value as the camera --> z from camera = -10 so the value of this z can't be -10 or else the game world would go on top of the camera
         transform.position = Vector3.Lerp(transform.position, targetPos, moveSpeed * Time.deltaTime);                        // Vector3.Lerp( current position of camera, where the player is, movement that camera can have in every update) 
     }
