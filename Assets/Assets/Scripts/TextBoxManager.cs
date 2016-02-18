@@ -14,7 +14,11 @@ public class TextBoxManager : MonoBehaviour {
     public int currentLine;
     public int endAtLine;
 
-    public PlayerController player; //disable the player from being able to move
+    public PlayerController player;
+
+    public bool isActive;
+
+    public bool stopPlayerMovement; //disable the player from being able to move during dialogue
 
     // Use this for initialization
     void Start()
@@ -30,10 +34,24 @@ public class TextBoxManager : MonoBehaviour {
         {
             endAtLine = textLines.Length - 1; //array starts at 0
         }
+
+        if (isActive) //text box will appear when you check box in Unity
+        {
+            EnableTextBox();
+        }
+        else
+        {
+            DisableTextBox();
+        }
     }
 
     void Update()
     {
+        if (!isActive) //won't run code after this code when text box is not active
+        {
+            return;
+        }
+
         theText.text = textLines[currentLine];
 
         if (Input.GetKeyDown(KeyCode.Return)) //get next line in dialog box by pressing 'Enter'(Return)
@@ -43,9 +61,36 @@ public class TextBoxManager : MonoBehaviour {
 
         if(currentLine > endAtLine) //texbox will go away after last line
         {
-            textBox.SetActive(false);
+            DisableTextBox();
         }
     }
 
+    public void EnableTextBox() //enable text box outside script
+    {
+        textBox.SetActive(true);
+        isActive = true;
 
+        if (stopPlayerMovement)
+        {
+            player.canMove = false;
+        }
+    }
+
+    public void DisableTextBox()
+    {
+        textBox.SetActive(false);
+        isActive = false;
+
+        player.canMove = true;
+        
+    }
+
+    public void ReloadScript(TextAsset theText) //allow us to use multiple text files
+    {
+        if(theText != null) //check if there's a text file
+        {
+            textLines = new string[1]; //replace old text file with new one
+            textLines = (theText.text.Split('\n'));
+        }
+    }
 }

@@ -11,8 +11,11 @@ public class PlayerController : MonoBehaviour {
 	private bool playerMoving;
 	private Vector2 lastMove; // to set the direction of the face when not moving
 
+    public bool canMove;
+
 	// Use this for initialization
-	void Start () {                                            
+	void Start () {    
+                                  
 		anim = GetComponent<Animator>();         // make changes to the Animator
 		myRigidbody = GetComponent<Rigidbody2D>(); //control Player by adding force --> won't bounce against objects
 	}
@@ -20,7 +23,14 @@ public class PlayerController : MonoBehaviour {
 	// Update is called once per frame                                                                                       //GetAxisRaw --> methode in Class Input | GetAxisRaw = a key that gets pressed
 	void Update ()                                                                                                           //right > 0.5f, left < -0.5f en 0 = idle (stilstaan) 
 	{
-		playerMoving = false;
+        if (!canMove) //player won't move when there's a dialogue, code won't run under this code
+        {
+            myRigidbody.isKinematic = true;
+            // i still don't know how to stop the Animator (legs and arms moving)
+            return;
+        }
+
+        playerMoving = false;
 		if (Input.GetAxisRaw("Horizontal") > 0.5f || Input.GetAxisRaw("Horizontal") < -0.5f)                                 //moving horizontal (left & right) --> on the x-axis            
 		{
 			//transform.Translate(new Vector3(Input.GetAxisRaw("Horizontal") * moveSpeed * Time.deltaTime, 0f, 0f));           //Translate --> lets the player move
@@ -49,6 +59,8 @@ public class PlayerController : MonoBehaviour {
 			myRigidbody.velocity = new Vector2(myRigidbody.velocity.x, 0f);
 		}
 
+
+        
 
 		anim.SetFloat("MoveX", Input.GetAxisRaw("Horizontal"));      // give a number to MoveX
 		anim.SetFloat("MoveY", Input.GetAxisRaw("Vertical"));        // give a number to MoveY
