@@ -20,6 +20,11 @@ public class TextBoxManager : MonoBehaviour {
 
     public bool stopPlayerMovement; //disable the player from being able to move during dialogue
 
+    private bool isTyping = false; //text scrolling on screen 
+    private bool cancelTyping = false;
+
+    public float typeSpeed;
+
     // Use this for initialization
     void Start()
     {
@@ -52,17 +57,48 @@ public class TextBoxManager : MonoBehaviour {
             return;
         }
 
-        theText.text = textLines[currentLine];
+        //theText.text = textLines[currentLine];
 
         if (Input.GetKeyDown(KeyCode.Return)) //get next line in dialog box by pressing 'Enter'(Return)
         {
-            currentLine += 1;
+            if (!isTyping)//if text is not typing out
+            {
+                currentLine += 1;
+
+                if (currentLine > endAtLine) //texbox will go away after last line
+                {
+                    DisableTextBox();
+                }
+                else
+                {
+                    StartCoroutine(TextScroll(textLines[currentLine])); //start scrolling through text
+                }
+            }
+            else if(isTyping && !cancelTyping)//if text is typing out and you haven't cancelled it
+            {
+                cancelTyping = true;
+            }
+            
         }
 
-        if(currentLine > endAtLine) //texbox will go away after last line
+        
+    }
+
+    private IEnumerator TextScroll (string lineOfText) //how the text scrolling works
+    {
+        int letter = 0;//keep track of what letter we are on within string
+        theText.text = "";//display nothing in box
+        isTyping = true;
+        cancelTyping = false;
+        while(isTyping && !cancelTyping && (letter < lineOfText.Length - 1))//make letters appear on screen
         {
-            DisableTextBox();
+            theText.text += lineOfText[letter];//we are at another letter
+            letter += 1;
+            yield return new WaitForSeconds(typeSpeed);//wait for time we have set at typeSpeed
         }
+        theText.text = lineOfText;
+        isTyping = false; //no more text
+        cancelTyping = false;
     }
 
     public void EnableTextBox() //enable text box outside script
@@ -74,6 +110,8 @@ public class TextBoxManager : MonoBehaviour {
         {
             player.canMove = false;
         }
+
+        StartCoroutine(TextScroll(textLines[currentLine]));
     }
 
     public void DisableTextBox()
