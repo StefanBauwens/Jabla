@@ -28,7 +28,6 @@ public class WorldDraw : MonoBehaviour {
 		tileHolder = new GameObject ("Tiles").transform; //empty gameobject to hold all the clones so it stays uncluttered
 		for (int rows = 0; rows < map.GetLength(0); rows++) { //forloop to draw the map
 			for (int colls = 0; colls < map.GetLength(1); colls++) { //colls stands for collumns :P
-				Debug.Log(rows);
 				switch (map [rows, colls]) { //checks to see which tile it is
 				case 0:
 					prefab = dirtPrefab;

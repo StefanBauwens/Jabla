@@ -60,28 +60,26 @@ public class TextBoxManager : MonoBehaviour {
         //theText.text = textLines[currentLine];
 
         if (Input.GetKeyDown(KeyCode.Return)) //get next line in dialog box by pressing 'Enter'(Return)
-        {
-            if (!isTyping)//if text is not typing out
-            {
-                currentLine += 1;
+		{
+	        if (!isTyping)//if text is not typing out
+	        {
+	            currentLine += 1;
 
-                if (currentLine > endAtLine) //texbox will go away after last line
-                {
-                    DisableTextBox();
-                }
-                else
-                {
-                    StartCoroutine(TextScroll(textLines[currentLine])); //start scrolling through text
-                }
-            }
-            else if(isTyping && !cancelTyping)//if text is typing out and you haven't cancelled it
-            {
-                cancelTyping = true;
-            }
-            
+	            if (currentLine > endAtLine) //texbox will go away after last line
+	            {
+	                DisableTextBox();
+	            }
+	            else
+	            {
+	                StartCoroutine(TextScroll(textLines[currentLine])); //start scrolling through text
+	            }
+	        }
+	        else if(isTyping && !cancelTyping)//if text is typing out and you haven't cancelled it
+	        {
+	            cancelTyping = true;
+	        }
         }
-
-        
+			    
     }
 
     private IEnumerator TextScroll (string lineOfText) //how the text scrolling works
