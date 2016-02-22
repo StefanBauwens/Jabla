@@ -22,13 +22,12 @@ public class ActivateTextAtLine : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (waitForPress && Input.GetKeyDown(KeyCode.M))
+		if (waitForPress && Input.GetKeyDown(KeyCode.Return) && !theTextBox.isActive) //this only can run if theTextbox isn't active already
         {
             theTextBox.ReloadScript(theText);
             theTextBox.currentLine = startLine;
             theTextBox.endAtLine = endLine;
             theTextBox.EnableTextBox();
-
             if (destroyWhenActivated) //text box won't appear again after one time
             {
                 Destroy(gameObject);

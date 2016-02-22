@@ -21,7 +21,7 @@ public class TextBoxManager : MonoBehaviour {
     public bool stopPlayerMovement; //disable the player from being able to move during dialogue
 
     private bool isTyping = false; //text scrolling on screen 
-    private bool cancelTyping = false;
+	private bool cancelTyping = false;
 
     public float typeSpeed;
 
@@ -88,7 +88,7 @@ public class TextBoxManager : MonoBehaviour {
         theText.text = "";//display nothing in box
         isTyping = true;
         cancelTyping = false;
-        while(isTyping && !cancelTyping && (letter < lineOfText.Length - 1))//make letters appear on screen
+		while(isTyping && !cancelTyping && (letter < lineOfText.Length - 1))//make letters appear on screen
         {
             theText.text += lineOfText[letter];//we are at another letter
             letter += 1;
@@ -111,15 +111,19 @@ public class TextBoxManager : MonoBehaviour {
 
         StartCoroutine(TextScroll(textLines[currentLine]));
     }
+	
+	public void DisableTextBox()
+	{
+		StartCoroutine (DisableTextBoxx()); 
+	}
 
-    public void DisableTextBox()
-    {
-        textBox.SetActive(false);
-        isActive = false;
-
-        player.canMove = true;
-        
-    }
+	private IEnumerator DisableTextBoxx ()
+	{
+		yield return new WaitForEndOfFrame (); //I use an IEnumerator instead of just a method so i could make sure i wait for the end of the frame and by doing so reset input.
+		textBox.SetActive(false);
+		isActive = false;
+		player.canMove = true;
+	}
 
     public void ReloadScript(TextAsset theText) //allow us to use multiple text files
     {
