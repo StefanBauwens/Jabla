@@ -2,8 +2,8 @@
 using System.Collections;
 
 public class Helper : BaseCharacters {
-    [SerializeField]
-    protected int _Gold; //Cash the person gives to the player(to execute a task if its a questgiver)
+    
+    public int _Gold; //Cash the person gives to the player(to execute a task if its a questgiver)
 
     //Constructors
     

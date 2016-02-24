@@ -5,8 +5,8 @@ using System.Collections;
 public class BaseCharacters : MonoBehaviour {
 
     //fields
-    [SerializeField] //protected variables will appear in editor Unity
-    protected string _Name;
+    public string _Name;
+    public TextAsset _Text;
     
 
     //Constructors

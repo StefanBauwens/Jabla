@@ -4,10 +4,10 @@ using System.Collections;
 public class QuestGivers : Helper {
 
     //Fields
-    [SerializeField] //display protected variable in editor Unity
-    protected string _ItemRequested; //The item the player must return;
-    [SerializeField]
-    protected int _Reward; //the award the player gets for returning the requested item;
+    
+    public string _ItemRequested; //The item the player must return;
+    
+    public int _Reward; //the award the player gets for returning the requested item;
 
     //Constructors
     public QuestGivers()
