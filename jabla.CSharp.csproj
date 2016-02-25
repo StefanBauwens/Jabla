@@ -78,6 +78,7 @@
     <Compile Include="Assets\Assets\Scripts\QuestGivers.cs" />
     <Compile Include="Assets\Assets\Scripts\TextBoxManager.cs" />
     <Compile Include="Assets\Assets\Scripts\TextImporter.cs" />
+    <Compile Include="Assets\Assets\Scripts\Timer.cs" />
     <Compile Include="Assets\Assets\Scripts\WorldDraw.cs" />
   </ItemGroup>
   <ItemGroup>
