@@ -52,11 +52,13 @@
      <Compile Include="Assets\Assets\Scripts\Helper.cs" />
      <Compile Include="Assets\Assets\Scripts\Items.cs" />
      <Compile Include="Assets\Assets\Scripts\Key.cs" />
+     <Compile Include="Assets\Assets\Scripts\NewBehaviourScript.cs" />
      <Compile Include="Assets\Assets\Scripts\PlayerController.cs" />
      <Compile Include="Assets\Assets\Scripts\PlayerInfo.cs" />
      <Compile Include="Assets\Assets\Scripts\QuestGivers.cs" />
      <Compile Include="Assets\Assets\Scripts\TextBoxManager.cs" />
      <Compile Include="Assets\Assets\Scripts\TextImporter.cs" />
+     <Compile Include="Assets\Assets\Scripts\Timer.cs" />
      <Compile Include="Assets\Assets\Scripts\WorldDraw.cs" />
      <None Include="Assets\Assets\Text\NPC_Speech.txt" />
      <None Include="Assets\Assets\Text\Dialog Player.txt" />
