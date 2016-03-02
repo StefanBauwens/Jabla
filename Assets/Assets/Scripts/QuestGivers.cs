@@ -35,7 +35,7 @@ public class QuestGivers : Helper {
 
     void Update()
     {
-        Debug.Log("This NPC's name is " + _Name + ", has " + _Gold + " gold, wants " + _ItemRequested + " and gives " + _Reward + " as a reward");
+        //Debug.Log("This NPC's name is " + _Name + ", has " + _Gold + " gold, wants " + _ItemRequested + " and gives " + _Reward + " as a reward");
     }
 
 }
