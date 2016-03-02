@@ -62,15 +62,22 @@
   <ItemGroup>
     <Compile Include="Assets\Assets\Scripts\ActivateTextAtLine.cs" />
     <Compile Include="Assets\Assets\Scripts\BaseCharacters.cs" />
-    <Compile Include="Assets\Assets\Scripts\Book.cs" />
     <Compile Include="Assets\Assets\Scripts\CameraController.cs" />
     <Compile Include="Assets\Assets\Scripts\Helper.cs" />
-    <Compile Include="Assets\Assets\Scripts\Items.cs" />
-    <Compile Include="Assets\Assets\Scripts\Key.cs" />
+    <Compile Include="Assets\Assets\Scripts\Items\BaseItem.cs" />
+    <Compile Include="Assets\Assets\Scripts\Items\BasePotion.cs" />
+    <Compile Include="Assets\Assets\Scripts\Items\Book.cs" />
+    <Compile Include="Assets\Assets\Scripts\Items\CreateNewPotion.cs" />
+    <Compile Include="Assets\Assets\Scripts\Items\Key.cs" />
     <Compile Include="Assets\Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Assets\Scripts\PlayerInfo.cs" />
     <Compile Include="Assets\Assets\Scripts\QuestGivers.cs" />
     <Compile Include="Assets\Assets\Scripts\TextBoxManager.cs" />
+    <Compile Include="Assets\Assets\Scripts\TextImporter.cs" />
+    <Compile Include="Assets\Assets\Scripts\TileClasses\Dangerous.cs" />
+    <Compile Include="Assets\Assets\Scripts\TileClasses\DoorTile.cs" />
+    <Compile Include="Assets\Assets\Scripts\TileClasses\Teleport.cs" />
+    <Compile Include="Assets\Assets\Scripts\TileClasses\Tiles.cs" />
     <Compile Include="Assets\Assets\Scripts\Timer.cs" />
     <Compile Include="Assets\Assets\Scripts\WorldDraw.cs" />
   </ItemGroup>
