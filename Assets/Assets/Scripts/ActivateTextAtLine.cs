@@ -3,7 +3,8 @@ using System.Collections;
 
 public class ActivateTextAtLine : MonoBehaviour {
 
-    public TextAsset theText;
+    //public TextAsset theText;
+	public string[] text;
 
     public int startLine;
     public int endLine;
@@ -24,7 +25,7 @@ public class ActivateTextAtLine : MonoBehaviour {
 	void Update () {
 		if (waitForPress && Input.GetKeyDown(KeyCode.Return) && !theTextBox.isActive) //this only can run if theTextbox isn't active already
         {
-            theTextBox.ReloadScript(theText);
+            theTextBox.ReloadScript(text); //theText
             theTextBox.currentLine = startLine;
             theTextBox.endAtLine = endLine;
             theTextBox.EnableTextBox();
@@ -45,7 +46,7 @@ public class ActivateTextAtLine : MonoBehaviour {
                 return;
             }
 
-            theTextBox.ReloadScript(theText);
+            theTextBox.ReloadScript(text); //theText
             theTextBox.currentLine = startLine;
             theTextBox.endAtLine = endLine;
             theTextBox.EnableTextBox();

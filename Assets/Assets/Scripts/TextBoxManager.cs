@@ -8,7 +8,7 @@ public class TextBoxManager : MonoBehaviour {
 
     public Text theText;
 
-    public TextAsset textFile;      //text you want to import
+    //public TextAsset textFile;      //text you want to import
     public string[] textLines;      //each string will be taken to array as a seperate object
 
     public int currentLine;
@@ -30,7 +30,7 @@ public class TextBoxManager : MonoBehaviour {
     {
         player = FindObjectOfType<PlayerController>(); //find player in scene
 
-        if (textFile != null) //check if there's a text file
+        /*if (textFile != null) //check if there's a text file
         {
             textLines = (textFile.text.Split('\n'));    //split text in parts wherever we see '\n'
         }
@@ -38,7 +38,7 @@ public class TextBoxManager : MonoBehaviour {
         if(endAtLine == 0)
         {
             endAtLine = textLines.Length - 1; //array starts at 0
-        }
+        }*/
 
         if (isActive) //text box will appear when you check box in Unity
         {
@@ -125,12 +125,14 @@ public class TextBoxManager : MonoBehaviour {
 		player.canMove = true;
 	}
 
-    public void ReloadScript(TextAsset theText) //allow us to use multiple text files
-    {
-        if(theText != null) //check if there's a text file
+    //public void ReloadScript(TextAsset theText) //allow us to use multiple text files
+	public void ReloadScript(string[] theText)
+	{
+        /*if(theText != null) //check if there's a text file
         {
             textLines = new string[1]; //replace old text file with new one
             textLines = (theText.text.Split('\n'));
-        }
+        }*/
+		textLines = theText;
     }
 }

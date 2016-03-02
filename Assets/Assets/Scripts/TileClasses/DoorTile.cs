@@ -26,4 +26,5 @@ public class DoorTile : Tiles { //e.G: doors that need a key
 	{
 		//insert code to check if player has key. If so door changes that the player can walk through it.
 	}
+
 }

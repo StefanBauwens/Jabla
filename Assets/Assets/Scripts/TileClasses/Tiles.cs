@@ -10,7 +10,8 @@ public class Tiles : MonoBehaviour {
 		DoorTile,
 		Dangerous
 	}
-		
+
+	public GameObject PlayerObject; 
 	public tileType mType;
 	protected bool mCanWalkThrough;//True if the player can walk through this tile
 
