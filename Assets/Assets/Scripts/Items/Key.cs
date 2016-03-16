@@ -3,21 +3,20 @@ using System.Collections;
 
 public class Key : BaseItem {
     //key to open certain doors
-    protected string _keyNumber; //should have the same name as the door so that we can check if it's the right key
+    public string keyNumber; //should have the same name as the door so that we can check if it's the right key
+    public string itemName;
+    public string itemDescription;
 
     //constructors
-    public Key()
+    public Key()    //default constructor
     {
-        _keyNumber = "Name of the door this key can open";
+        keyNumber = "Name of the door this key can open";
     }
-    public Key(string name, string description, string keynumber): base(name, description)
+    public Key(string name, string description, string keynr) : base(name, description)
     {
-        _keyNumber = keynumber;
+        keyNumber = keynr;
+        itemName = name;
+        itemDescription = description;
     }
-    //properties
-    public string keyNumber
-    {
-        get { return _keyNumber; }
-        set { _keyNumber = value; }
-    }
+    
 }

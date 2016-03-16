@@ -7,9 +7,10 @@ public class Timer : MonoBehaviour
 
     public Text textTimer;
     public float timeInMinutes;
+    public static float changeTime;  //make static so it will be accessible in other Classes
     float countdownTime;
 
-
+    
     void Start()
     {
         countdownTime = (timeInMinutes * 60);   //change minutes to seconds
@@ -25,7 +26,9 @@ public class Timer : MonoBehaviour
 
         //display mm:ss format on screen
         string displayTime = string.Format("{0}:{1}", minutes, seconds);
-        textTimer.text = displayTime; 
-        
+        textTimer.text = displayTime;
+
+        changeTime = timeInMinutes;
+
     }
 }
