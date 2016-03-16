@@ -9,7 +9,6 @@ public class DangerousTile : Tiles { //bv. lava, water, put
 	public int endLine;
 	void Start()
 	{
-		PlayerObject = GameObject.FindWithTag ("Player"); //fills Player automatically in
 		theTextBox= (TextBoxManager)GameObject.FindWithTag ("textbox").GetComponent ("TextBoxManager"); //gets Textboxmanager type automatically
 	}
 
