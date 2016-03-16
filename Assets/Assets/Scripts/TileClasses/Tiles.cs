@@ -11,7 +11,7 @@ public class Tiles : MonoBehaviour {
 		Dangerous
 	}
 
-	public GameObject PlayerObject; 
+	public GameObject PlayerObject;
 	public tileType mType;
 	protected bool mCanWalkThrough;//True if the player can walk through this tile
 

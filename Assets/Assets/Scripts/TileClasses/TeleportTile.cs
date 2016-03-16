@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Teleport : Tiles {
+public class TeleportTile : Tiles {
 	
 	public float mNewXCoordinate;
 	public float  mNewYCoordinate;
@@ -16,14 +16,14 @@ public class Teleport : Tiles {
 	}
 
 	//Constructors
-	public Teleport()
+	public TeleportTile()
 	{
 		mType = tileType.Teleport;
 		mNewXCoordinate = 0f; //eventually change these to Player's current position
 		mNewYCoordinate = 0f;
 	}
 
-	public Teleport(bool canWalkThrough, float newXCoordinate, float newYCoordinate) : base(canWalkThrough)
+	public TeleportTile(bool canWalkThrough, float newXCoordinate, float newYCoordinate) : base(canWalkThrough)
 	{
 		mType = tileType.Teleport;
 		mNewXCoordinate = newXCoordinate; 

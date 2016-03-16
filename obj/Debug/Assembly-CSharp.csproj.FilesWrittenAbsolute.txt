@@ -1,0 +1,17 @@
+/Users/stefan/jabla/Temp/bin/Debug/Assembly-CSharp.dll.mdb
+/Users/stefan/jabla/Temp/bin/Debug/Assembly-CSharp.dll
+/Users/stefan/jabla/obj/Debug/Assembly-CSharp.dll
+/Users/stefan/jabla/obj/Debug/Assembly-CSharp.dll.mdb
+/Users/stefan/jabla/Temp/bin/Debug/UnityEngine.dll
+/Users/stefan/jabla/Temp/bin/Debug/UnityEditor.dll
+/Users/stefan/jabla/Temp/bin/Debug/UnityEngine.Networking.dll
+/Users/stefan/jabla/Temp/bin/Debug/UnityEngine.UI.dll
+/Users/stefan/jabla/Temp/bin/Debug/Mono.Cecil.dll
+/Users/stefan/jabla/Temp/bin/Debug/Unity.SerializationLogic.dll
+/Users/stefan/jabla/Temp/bin/Debug/Unity.DataContract.dll
+/Users/stefan/jabla/Temp/bin/Debug/ICSharpCode.NRefactory.dll
+/Users/stefan/jabla/Temp/bin/Debug/Unity.UNetWeaver.dll
+/Users/stefan/jabla/Temp/bin/Debug/Unity.UNetWeaver.dll.mdb
+/Users/stefan/jabla/Temp/bin/Debug/Unity.CecilTools.dll
+/Users/stefan/jabla/Temp/bin/Debug/Mono.Cecil.Pdb.dll
+/Users/stefan/jabla/Temp/bin/Debug/Mono.Cecil.Mdb.dll
