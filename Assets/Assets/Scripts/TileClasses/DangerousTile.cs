@@ -7,10 +7,7 @@ public class DangerousTile : Tiles { //bv. lava, water, put
 	public TextBoxManager theTextBox;
 	public int startLine;
 	public int endLine;
-	void Start()
-	{
-		theTextBox= (TextBoxManager)GameObject.FindWithTag ("textbox").GetComponent ("TextBoxManager"); //gets Textboxmanager type automatically
-	}
+
 
 	//Constructors
 	public DangerousTile()
@@ -53,6 +50,12 @@ public class DangerousTile : Tiles { //bv. lava, water, put
 			theTextBox.EnableTextBox();
 			Application.Quit(); //won't work in editor.
 		}
+	}
+
+	void Start()
+	{
+		theTextBox= (TextBoxManager)GameObject.FindWithTag ("textbox").GetComponent ("TextBoxManager"); //gets Textboxmanager type automatically
+		PlayerObject = GameObject.FindWithTag ("Player"); //fills Player automatically in
 	}
 		
 }

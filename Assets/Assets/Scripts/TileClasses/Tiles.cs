@@ -66,6 +66,5 @@ public class Tiles : MonoBehaviour {
 
 	void Start() {
 		PlayerObject = GameObject.FindWithTag ("Player"); //fills Player automatically in
-
 	}
 }
