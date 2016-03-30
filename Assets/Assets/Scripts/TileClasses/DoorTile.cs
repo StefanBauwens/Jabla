@@ -12,14 +12,14 @@ public class DoorTile : Tiles { //e.G: doors that need a key
 	{
 		mType = tileType.DoorTile;
 		mCanWalkThrough = false;
-		mInfo[1] = "This door needs a key to be opened";
+		mInfo[0] = "This door needs a key to be opened";
 	}
 
 	public DoorTile(string info)
 	{
 		mType = tileType.DoorTile;
 		mCanWalkThrough = false;
-		mInfo[1] = info;
+		mInfo[0] = info;
 	}
 
 	//Methods
@@ -32,7 +32,7 @@ public class DoorTile : Tiles { //e.G: doors that need a key
 		} else {
 			theTextBox.ReloadScript(mInfo); //what happens when you die.
 			theTextBox.currentLine =0;
-			theTextBox.endAtLine = 1;
+			theTextBox.endAtLine = 0;
 			theTextBox.EnableTextBox();
 		}
 	}
