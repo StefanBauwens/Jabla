@@ -63,8 +63,4 @@ public class Tiles : MonoBehaviour {
 			mType = value;
 		}
 	}
-
-	void Start() {
-		PlayerObject = GameObject.FindWithTag ("Player"); //fills Player automatically in
-	}
 }

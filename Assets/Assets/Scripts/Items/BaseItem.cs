@@ -2,9 +2,10 @@
 using System.Collections;
 
 public class BaseItem: MonoBehaviour {
-
-    protected string _itemName;
-    protected string _itemDescription;//description of the item
+	
+	public Sprite _itemSprite;
+    public string _itemName;
+    public string _itemDescription;//description of the item
 
     
     //constructors
