@@ -21,5 +21,38 @@ public class BaseItem: MonoBehaviour {
         _itemDescription = description;
     }
 
+	public BaseItem(Sprite sprite, string name, string description)
+	{
+		_itemSprite = sprite;
+		_itemName = name;
+		_itemDescription = description;
+	}
+	//properties
+
+	public Sprite itemSprite {
+		get {
+			return _itemSprite;
+		}
+		set {
+			_itemSprite = value;
+		}
+	}
+	public string itemName {
+		get {
+			return _itemName;
+		}
+		set {
+			_itemName = value;
+		}
+	}
+	public string itemDescription {
+		get {
+			return _itemDescription;
+		}
+		set {
+			_itemDescription = value;
+		}
+	}
+
    
 }
