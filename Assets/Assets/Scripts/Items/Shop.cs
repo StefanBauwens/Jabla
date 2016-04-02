@@ -179,6 +179,8 @@ public class Shop : MonoBehaviour {
 		shopBox.SetActive(false);
 		if (mPlayerInfo.gold >= itemList [nr + mOffset].itemPrice) { //checks if you can afford the item and changes the textbox accordingly
 			mPopupText.text = _areYouSureMessage;
+			mYesButton.gameObject.SetActive (true); //shows the yes button
+			mNoButton.gameObject.GetComponentInChildren<Text>().text = "No"; //changes the no button back in case it was set to cancel
 		} else {
 			mPopupText.text = _tooLittleMoneyMessage;
 			mYesButton.gameObject.SetActive (false); //hides the yes button

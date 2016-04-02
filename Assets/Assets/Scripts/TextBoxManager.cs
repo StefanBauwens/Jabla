@@ -61,7 +61,7 @@ public class TextBoxManager : MonoBehaviour {
 
         if (Input.GetKeyDown(KeyCode.Return)) //get next line in dialog box by pressing 'Enter'(Return)
 		{
-	        if (!isTyping)//if text is not typing out
+			if (!isTyping)//if text is not typing out
 	        {
 	            currentLine += 1;
 
