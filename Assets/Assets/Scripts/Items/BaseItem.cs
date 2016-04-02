@@ -6,6 +6,7 @@ public class BaseItem: MonoBehaviour {
 	public Sprite _itemSprite;
     public string _itemName;
     public string _itemDescription;//description of the item
+	public int _itemPrice;
 
     
     //constructors
@@ -51,6 +52,14 @@ public class BaseItem: MonoBehaviour {
 		}
 		set {
 			_itemDescription = value;
+		}
+	}
+	public int itemPrice {
+		get {
+			return _itemPrice;
+		}
+		set {
+			_itemPrice = value;
 		}
 	}
 
