@@ -57,7 +57,7 @@ public class QuestGivers : Helper {
 		} else {
 			if (_TimesVisited ==1) {
 				this.gameObject.GetComponent<ActivateTextAtLine> ().endLine = 0; 
-				if (_Player.gameObject.GetComponent<Inventory> ()._itemName == _ItemRequested) { //checks if you brought the item
+				if (_Player.gameObject.GetComponent<BaseItem> ()._itemName == _ItemRequested) { //checks if you brought the item
 					this.gameObject.GetComponent<ActivateTextAtLine> ().text [0] = _RewardSentence;
 					_Player.gold += _Reward; //gives the player his reward
 					_TimesVisited = 2;

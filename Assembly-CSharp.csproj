@@ -51,10 +51,9 @@
      <Compile Include="Assets\Assets\Scripts\Helper.cs" />
      <Compile Include="Assets\Assets\Scripts\Items\BaseItem.cs" />
      <Compile Include="Assets\Assets\Scripts\Items\Book.cs" />
-     <Compile Include="Assets\Assets\Scripts\Items\Inventory.cs" />
+     <Compile Include="Assets\Assets\Scripts\Items\Inventory2.cs" />
      <Compile Include="Assets\Assets\Scripts\Items\Key.cs" />
      <Compile Include="Assets\Assets\Scripts\Items\Potion.cs" />
-     <Compile Include="Assets\Assets\Scripts\Items\Shop.cs" />
      <Compile Include="Assets\Assets\Scripts\Items\Shop2.cs" />
      <Compile Include="Assets\Assets\Scripts\PlayerController.cs" />
      <Compile Include="Assets\Assets\Scripts\PlayerInfo.cs" />

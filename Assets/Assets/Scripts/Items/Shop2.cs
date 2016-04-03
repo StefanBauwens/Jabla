@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic; //for lists
 using UnityEngine.UI; //add to access things in UI in Unity 5
+using System.Reflection; //using this to be able to use getfields
 
 public class Shop2 : MonoBehaviour {
 
@@ -26,7 +27,7 @@ public class Shop2 : MonoBehaviour {
 
 	protected Text mPopupText;
 
-	protected Inventory mInventory;
+	protected Inventory2 mInventory;
 	protected PlayerInfo mPlayerInfo;
 
 	protected GameObject textBox;
@@ -42,7 +43,7 @@ public class Shop2 : MonoBehaviour {
 	void Start () {
 		textBox = new GameObject ();
 		shopBox = new GameObject ();
-		mInventory = _PlayerObject.GetComponent<Inventory> (); //gets the inventory from the player
+		mInventory = _PlayerObject.GetComponent<Inventory2> (); //gets the inventory from the player
 		mPlayerInfo = _PlayerObject.GetComponent<PlayerInfo>(); //gets the player info, so we can check it's gold and modify it
 
 
@@ -110,9 +111,10 @@ public class Shop2 : MonoBehaviour {
 		_shopBuyButton [3].onClick.AddListener (() => BuyItem(3));
 		_shopBuyButton [4].onClick.AddListener (() => BuyItem(4));
 
-		foreach (var item in this.GetComponents<BaseItem>()) { //gets all the baseitems and ads them to the shop
+		foreach (var item in this.GetComponents<BaseItem>()) { //gets all the baseitems and adds them to the shop
 			itemList.Add (item);
 		}
+		DrawItemsShop (0);
 		 
 	}
 
@@ -173,10 +175,12 @@ public class Shop2 : MonoBehaviour {
 
 	public void PressYesButton() { // the inventory is updated with new values.
 		if (mPlayerInfo.gold >= itemList [itemNum + mOffset].itemPrice) {
-			mInventory.itemName = itemList [itemNum + mOffset].itemName;
+			/*mInventory.itemName = itemList [itemNum + mOffset].itemName;
 			mInventory.itemDescription = itemList [itemNum + mOffset].itemDescription;
 			mInventory.itemSprite = itemList [itemNum + mOffset].itemSprite;
-			mInventory.itemPrice = itemList [itemNum + mOffset].itemPrice;
+			mInventory.itemPrice = itemList [itemNum + mOffset].itemPrice;*/
+			Destroy (_PlayerObject.GetComponent<BaseItem> ());//removes whats currently in the inventory
+			CopyComponent(itemList[itemNum+mOffset], _PlayerObject);//adds the new bought componennt
 			mPlayerInfo.gold -= itemList [itemNum + mOffset].itemPrice; //takes the money of the player
 			textBox.SetActive (false); //disables the textbox after you click yes
 			shopBox.SetActive (true); //enables the shop again
@@ -185,5 +189,15 @@ public class Shop2 : MonoBehaviour {
 	public void PressNoButton() {
 		textBox.SetActive (false); //disables the textbox after you click yes
 		shopBox.SetActive (true); //enables the shop again
+	}
+	
+	public void CopyComponent(Component original, GameObject destination) //method to copy a component to another component
+	{
+		Component copy = destination.AddComponent(original.GetType());
+		FieldInfo[] fields = original.GetType().GetFields();  //gets the public fields from the original component
+		foreach (FieldInfo field in fields)
+		{
+			field.SetValue(copy, field.GetValue(original)); //places the fields on the new component
+		}
 	}
 }
