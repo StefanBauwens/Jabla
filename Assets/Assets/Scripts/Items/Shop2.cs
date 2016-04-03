@@ -3,22 +3,14 @@ using System.Collections;
 using System.Collections.Generic; //for lists
 using UnityEngine.UI; //add to access things in UI in Unity 5
 
-public class Shop : MonoBehaviour {
+public class Shop2 : MonoBehaviour {
 
-	public BaseItem[] listOfBaseItems;
-
-	protected List<BaseItem> itemList; //this will be a list containing all the items in the shop
-	public Sprite[] _itemSprites = new Sprite[5]; //with these arrays you can create your own items in unity.
-	public string[] _itemNames = new string[5];
-	public string[] _itemDescriptions = new string[5];
-	public int[] _itemPrices = new int[5];
-
+	public List<BaseItem> itemList; //this will be a list containing all the items in the shop
 
 	protected Image[] _shopIcon = new Image[5];
 	protected Text[] _shopName = new Text[5];
 	protected Button[] _shopBuyButton = new Button[5];
 
-	protected GameObject emptyObj;
 	protected int mOffset = 0;
 
 	public GameObject mShop;
@@ -32,7 +24,7 @@ public class Shop : MonoBehaviour {
 	protected Button mYesButton;
 	protected Button mNoButton;
 
-	public Text mPopupText;
+	protected Text mPopupText;
 
 	protected Inventory mInventory;
 	protected PlayerInfo mPlayerInfo;
@@ -53,8 +45,6 @@ public class Shop : MonoBehaviour {
 		mInventory = _PlayerObject.GetComponent<Inventory> (); //gets the inventory from the player
 		mPlayerInfo = _PlayerObject.GetComponent<PlayerInfo>(); //gets the player info, so we can check it's gold and modify it
 
-		emptyObj = new GameObject();
-		emptyObj.AddComponent<BaseItem>();//creates an empty gameobject and adds BaseItem to it
 
 		shopCopy = Instantiate (mShop); //creates a clone of the shop
 		ii = 0;
@@ -120,20 +110,10 @@ public class Shop : MonoBehaviour {
 		_shopBuyButton [3].onClick.AddListener (() => BuyItem(3));
 		_shopBuyButton [4].onClick.AddListener (() => BuyItem(4));
 
-
-		itemList = new List<BaseItem>(); //initialise the list of items
-		for (int i = 0; i < _itemSprites.Length; i++) { //will add all the sprites, names and descriptions to a baseitem, and then add that baseitem to the list
-
-			GameObject temp = Instantiate(emptyObj); //clones the emptygameobject with baseitem on it. I have to do it like this because using "new BaseItem" isn't allowed in Unity.
-			temp.GetComponent<BaseItem> ().itemSprite = _itemSprites [i];
-			temp.GetComponent<BaseItem> ().itemName = _itemNames [i];
-			temp.GetComponent<BaseItem> ().itemDescription = _itemDescriptions [i];
-			temp.GetComponent<BaseItem> ().itemPrice = _itemPrices [i];
-
-			itemList.Add (temp.GetComponent<BaseItem>());
-			Destroy (temp); //gets rid of temp
-		}	
-		Destroy (emptyObj);//removes emptyobj
+		foreach (var item in this.GetComponents<BaseItem>()) { //gets all the baseitems and ads them to the shop
+			itemList.Add (item);
+		}
+		 
 	}
 
 	void Update () {
@@ -157,7 +137,7 @@ public class Shop : MonoBehaviour {
 	}
 
 	public void PressButtonDown() { //this method is called when you click the down button
-		if (mOffset+6<=_itemSprites.Length ) { //checks if the list is longer
+		if (mOffset+6<=itemList.Count) { //checks if the list is longer
 			mOffset++;
 			DrawItemsShop (mOffset); //redraws the shop
 		}

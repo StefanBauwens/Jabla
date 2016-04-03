@@ -5,8 +5,7 @@ public class Book : BaseItem {
     //book in which you can read after pressing button
 
     public TextAsset bookContent;
-    public string itemName;
-    public string itemDescription;
+	public string[] bookPages; //each element of this array is a page
 
     //constructors
     public Book()
@@ -20,5 +19,7 @@ public class Book : BaseItem {
         itemDescription = description;
     }
    
+	void Start() {
+	}
    
 }
