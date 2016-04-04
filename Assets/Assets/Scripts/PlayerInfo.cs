@@ -5,13 +5,13 @@ public class PlayerInfo : MonoBehaviour {
 
     public int gold;
     public string playerName;
-	public string Inventory;
+	//public string Inventory;
 
     public PlayerInfo()
     {
         gold = 0;
         playerName = "John Smith";
-		Inventory = "EMPTY";
+		//Inventory = "EMPTY";
     }
 
 	// Use this for initialization

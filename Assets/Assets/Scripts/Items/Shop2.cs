@@ -191,7 +191,7 @@ public class Shop2 : MonoBehaviour {
 		shopBox.SetActive (true); //enables the shop again
 	}
 	
-	public void CopyComponent(Component original, GameObject destination) //method to copy a component to another component
+	static public void CopyComponent(Component original, GameObject destination) //method to copy a component to another component //static so we can use it elsewhere
 	{
 		Component copy = destination.AddComponent(original.GetType());
 		FieldInfo[] fields = original.GetType().GetFields();  //gets the public fields from the original component

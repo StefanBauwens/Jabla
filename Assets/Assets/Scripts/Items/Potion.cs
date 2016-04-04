@@ -3,9 +3,10 @@ using System.Collections;
 
 public class Potion : BaseItem {
 
-    public string itemName;
-    public string itemDescription;
     public potionTypes types;
+	public GameObject playerObject;
+
+	protected bool alreadyChecked= false;
 
 	public enum potionTypes
     {
@@ -23,12 +24,19 @@ public class Potion : BaseItem {
 
     void Start()
     {
-        
+		//Check ();
     }
 
-    void Update()
+	void Update() {
+		if (this.gameObject == playerObject && alreadyChecked==false) { //check to see if player is carrying the potion
+			Check();
+			alreadyChecked = true;
+		}
+	}
+
+	public void Check() 
     {
-        if (types == potionTypes.Timechanger)
+        /*if (types == potionTypes.Timechanger)
         {
             TimeDecreaser(Timer.changeTime);
         }
@@ -39,14 +47,26 @@ public class Potion : BaseItem {
         else if (types == potionTypes.Speed)
         {
 
-        }
-        Debug.Log(Timer.changeTime);
+        }*/
+		
+		switch (types) { //use a switch instead
+		case potionTypes.Timechanger:
+			Timer.changeTime -= 3;//= TimeDecreaser (Timer.changeTime);
+			break;
+		case potionTypes.Questcompleter:
+			//nothing happens lol
+			break;
+		case potionTypes.Speed:
+			playerObject.GetComponent<PlayerController> ().moveSpeed -= 1;
+			break;
+		}
+        //Debug.Log(Timer.changeTime);
     }
 
-    float TimeDecreaser(float time)
+    /*float TimeDecreaser(float time)
     {
         float decreasedTime;
-        decreasedTime = time - 2;
+        decreasedTime = time - 3;
         return decreasedTime;
-    }
+    }*/
 }

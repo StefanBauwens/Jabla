@@ -19,16 +19,17 @@ public class Timer : MonoBehaviour
     void Update()
     {
         countdownTime -= Time.deltaTime;
-
+		countdownTime += changeTime/360f;
         //Math.FloorToInt --> number will be rounded down to the nearest integer(afronden)
         int minutes = Mathf.FloorToInt(countdownTime / 60f);    
         int seconds = Mathf.FloorToInt(countdownTime - minutes * 60);
 
-        //display mm:ss format on screen
-        string displayTime = string.Format("{0}:{1}", minutes, seconds);
+		//display mm:ss format on screen
+		string displayTime = string.Format("{0}:{1}", minutes, seconds);
         textTimer.text = displayTime;
 
-        changeTime = timeInMinutes;
+        //changeTime = timeInMinutes;
+
 
     }
 }

@@ -5,6 +5,7 @@ public class DoorTile : Tiles { //e.G: doors that need a key
 	public bool haveKey;
 	public string[] mInfo = new string[1];//Information about what the "door" needs to be opened
 	public Sprite unlockedSprite;
+	public string mKeyNumber; //the number of the key that needs to be used to open this door
 	public TextBoxManager theTextBox;
 
 	//Constructors
@@ -26,6 +27,12 @@ public class DoorTile : Tiles { //e.G: doors that need a key
 
 	public void CheckForKey()
 	{
+		if (PlayerObject.GetComponent<Key>() !=null) { //checks if the player is carrying a key
+			if (PlayerObject.GetComponent<Key>().keyNumber == mKeyNumber) {
+				haveKey = true;
+			}
+		}
+
 		if (haveKey) { //if player has key change sprite to unlocked-door-sprite and make that you can walk through it.
 			GetComponent<SpriteRenderer> ().sprite = unlockedSprite;
 			GetComponent<PolygonCollider2D> ().enabled = false;

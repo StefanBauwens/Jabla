@@ -7,7 +7,8 @@ public class QuestGivers : Helper {
     
     public string _ItemRequested; //The item the player must return;
     
-    public int _Reward; //the award the player gets for returning the requested item;
+    public int _Reward; //the award the player gets for returning the requested item
+	public BaseItem _RewardItem; //give item as reward.
 	public string _RewardSentence; //what he says when you bring the requested item
 	public string _ReturnWithNothing; //what he says when you don't bring the requested item.
 	public string _ReturnSentence; //What he says when he already gave you your reward.
@@ -31,12 +32,12 @@ public class QuestGivers : Helper {
     //Methods
 
     //Check if player returned item
-    public string CheckForItem()
+    /* public string CheckForItem()
     {
         //check-code here
         return "Thank you";
         //give-reward-code here
-    }
+    }*/
 	void Start() {
 		base.Start2(); //runs the start from Helperclass
 	}
@@ -59,6 +60,10 @@ public class QuestGivers : Helper {
 				this.gameObject.GetComponent<ActivateTextAtLine> ().endLine = 0; 
 				if (_Player.gameObject.GetComponent<BaseItem> ()._itemName == _ItemRequested) { //checks if you brought the item
 					this.gameObject.GetComponent<ActivateTextAtLine> ().text [0] = _RewardSentence;
+					if (_RewardItem != null) {
+						Destroy (_Player.gameObject.GetComponent<BaseItem> ());//removes whats currently in the inventory
+						Shop2.CopyComponent(_RewardItem, _Player.gameObject);//adds the new bought componennt
+					}
 					_Player.gold += _Reward; //gives the player his reward
 					_TimesVisited = 2;
 				} else {
