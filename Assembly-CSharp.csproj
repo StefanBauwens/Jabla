@@ -51,6 +51,7 @@
      <Compile Include="Assets\Assets\Scripts\Helper.cs" />
      <Compile Include="Assets\Assets\Scripts\Items\BaseItem.cs" />
      <Compile Include="Assets\Assets\Scripts\Items\Book.cs" />
+     <Compile Include="Assets\Assets\Scripts\Items\Chest.cs" />
      <Compile Include="Assets\Assets\Scripts\Items\Inventory2.cs" />
      <Compile Include="Assets\Assets\Scripts\Items\Key.cs" />
      <Compile Include="Assets\Assets\Scripts\Items\Potion.cs" />

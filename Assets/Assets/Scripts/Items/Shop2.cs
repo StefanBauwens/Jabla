@@ -40,7 +40,7 @@ public class Shop2 : MonoBehaviour {
 
 	protected int itemNum;
 	protected int ii;
-	void Start () {
+	public void Start () {
 		textBox = new GameObject ();
 		shopBox = new GameObject ();
 		mInventory = _PlayerObject.GetComponent<Inventory2> (); //gets the inventory from the player
@@ -121,7 +121,7 @@ public class Shop2 : MonoBehaviour {
 	void Update () {
 	}
 
-	void DrawItemsShop(int offset) { //this method draws the items in the shop
+	virtual protected void DrawItemsShop(int offset) { //this method draws the items in the shop
 		for (int i = 0; i < 5; i++) { 
 			_shopIcon[i].sprite = itemList[i+offset].itemSprite; 
 			_shopName[i].text = itemList[i+offset].itemName;
@@ -175,10 +175,6 @@ public class Shop2 : MonoBehaviour {
 
 	public void PressYesButton() { // the inventory is updated with new values.
 		if (mPlayerInfo.gold >= itemList [itemNum + mOffset].itemPrice) {
-			/*mInventory.itemName = itemList [itemNum + mOffset].itemName;
-			mInventory.itemDescription = itemList [itemNum + mOffset].itemDescription;
-			mInventory.itemSprite = itemList [itemNum + mOffset].itemSprite;
-			mInventory.itemPrice = itemList [itemNum + mOffset].itemPrice;*/
 			Destroy (_PlayerObject.GetComponent<BaseItem> ());//removes whats currently in the inventory
 			CopyComponent(itemList[itemNum+mOffset], _PlayerObject);//adds the new bought componennt
 			mPlayerInfo.gold -= itemList [itemNum + mOffset].itemPrice; //takes the money of the player
