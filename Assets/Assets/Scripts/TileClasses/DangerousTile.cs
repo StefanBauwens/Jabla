@@ -7,7 +7,9 @@ public class DangerousTile : Tiles { //bv. lava, water, put
 	public TextBoxManager theTextBox;
 	public int startLine;
 	public int endLine;
+    public DeathMenu deadScreen;
 
+    
 
 	//Constructors
 	public DangerousTile()
@@ -43,18 +45,20 @@ public class DangerousTile : Tiles { //bv. lava, water, put
 	void OnTriggerEnter2D(Collider2D other)  
 	{
 		if (other.name == PlayerObject.name) { //checks if collider makes contact with the player.
-			
-			theTextBox.ReloadScript(mDeathMessage); //what happens when you die.
+            deadScreen.isDead = true; // player is dead
+            deadScreen.PlayerDead(); // calls method PLayerDead from class DeathMenu
+            theTextBox.ReloadScript(mDeathMessage); //what happens when you die.
 			theTextBox.currentLine =startLine;
 			theTextBox.endAtLine = endLine;
 			theTextBox.EnableTextBox();
-			Application.Quit(); //won't work in editor.
+            
+			//Application.Quit(); //won't work in editor.
 		}
 	}
 
 	void Start()
 	{
-		theTextBox= (TextBoxManager)GameObject.FindWithTag ("textbox").GetComponent ("TextBoxManager"); //gets Textboxmanager type automatically
+        theTextBox = (TextBoxManager)GameObject.FindWithTag ("textbox").GetComponent ("TextBoxManager"); //gets Textboxmanager type automatically
 		PlayerObject = GameObject.FindWithTag ("Player"); //fills Player automatically in
 	}
 		

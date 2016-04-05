@@ -5,7 +5,7 @@ public class PauseMenu : MonoBehaviour {
 
     public bool isPaused; 
     public GameObject pauseMenuCanvas; // pause menu screen
-    public PlayerController player;
+    protected PlayerController player;
     public bool stopPlayerMovement; //disable the player from being able to move during pause menu
 
     void Start ()
