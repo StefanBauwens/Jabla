@@ -1,12 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PauseMenu : MonoBehaviour {
+public class PauseMenu : MainMenu {
 
-    public bool isPaused; 
+    protected bool isPaused; 
     public GameObject pauseMenuCanvas; // pause menu screen
     protected PlayerController player;
-    public bool stopPlayerMovement; //disable the player from being able to move during pause menu
+    protected bool stopPlayerMovement; //disable the player from being able to move during pause menu
 
     void Start ()
     {
@@ -37,10 +37,7 @@ public class PauseMenu : MonoBehaviour {
         isPaused = false; // pause menu will go away
     }
 
-    public void ExitGame()
-    {
-        Application.Quit();
-    }
+    
 
     
 }

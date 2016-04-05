@@ -1,9 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class DeathMenu : MonoBehaviour {
+public class DeathMenu : MainMenu {
 
-    public string startGame; // variable to put the game scene in
     public GameObject deathMenuCanvas; // death menu screen
     public bool isDead;
 
@@ -19,14 +18,5 @@ public class DeathMenu : MonoBehaviour {
             deathMenuCanvas.SetActive(false); 
         }
     }
-
-    public void RestartGame()
-    {
-        Application.LoadLevel(startGame);
-    }
-
-    public void ExitGame()
-    {
-        Application.Quit();
-    }
+    
 }

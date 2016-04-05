@@ -9,7 +9,7 @@ public class Timer : MonoBehaviour
     public float timeInMinutes;
     public static float changeTime;  //make static so it will be accessible in other Classes
     float countdownTime;
-    public DeathMenu deadScreen;
+    public TimeMenu timeScreen;
 
     
     void Start()
@@ -34,8 +34,8 @@ public class Timer : MonoBehaviour
         
         if (displayTime == "0:0")
         {
-            deadScreen.isDead = true; // player is dead
-            deadScreen.PlayerDead(); // calls method PlayerDead from class DeathMenu
+            timeScreen.timeUp = true; // time is up
+            timeScreen.TimeUp(); // calls method TimeUp from class TimeMenu
         }
         
         //Debug.Log(countdownTime);
