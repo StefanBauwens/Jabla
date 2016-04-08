@@ -6,6 +6,10 @@ public class DeathMenu : MainMenu {
     public GameObject deathMenuCanvas; // death menu screen
     public bool isDead;
 
+	void Start() {
+		this.GetComponentInChildren<Canvas> ().gameObject.SetActive (false);
+	}
+
 
     public void PlayerDead()
     {
