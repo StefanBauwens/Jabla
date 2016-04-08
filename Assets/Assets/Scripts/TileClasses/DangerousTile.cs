@@ -17,7 +17,7 @@ public class DangerousTile : Tiles { //bv. lava, water, put
 	//Constructors
 	public DangerousTile()
 	{
-		mType = tileType.Dangerous; //default text
+		//mType = tileType.Dangerous; //default text
 		mDeathMessage = "You died!";
 		//startLine =0;
 		//endLine = 1;
@@ -25,7 +25,7 @@ public class DangerousTile : Tiles { //bv. lava, water, put
 
 	public DangerousTile(string deathMessage)
 	{
-		mType = tileType.Dangerous;
+		//mType = tileType.Dangerous;
 		mDeathMessage = deathMessage;
 		//startLine =0;
 		//endLine = 1;

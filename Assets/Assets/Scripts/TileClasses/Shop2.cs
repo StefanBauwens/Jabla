@@ -4,7 +4,7 @@ using System.Collections.Generic; //for lists
 using UnityEngine.UI; //add to access things in UI in Unity 5
 using System.Reflection; //using this to be able to use getfields
 
-public class Shop2 : MonoBehaviour {
+public class Shop2 : Tiles{
 
 	public List<BaseItem> itemList; //this will be a list containing all the items in the shop
 
@@ -15,7 +15,7 @@ public class Shop2 : MonoBehaviour {
 	protected int mOffset = 0;
 
 	public GameObject mShop;
-	public GameObject _PlayerObject;
+	//public GameObject _PlayerObject;
 
 	protected GameObject shopCopy;
 
@@ -43,8 +43,8 @@ public class Shop2 : MonoBehaviour {
 	public void Start () {
 		textBox = new GameObject ();
 		shopBox = new GameObject ();
-		mInventory = _PlayerObject.GetComponent<Inventory2> (); //gets the inventory from the player
-		mPlayerInfo = _PlayerObject.GetComponent<PlayerInfo>(); //gets the player info, so we can check it's gold and modify it
+		mInventory = PlayerObject.GetComponent<Inventory2> (); //gets the inventory from the player
+		mPlayerInfo = PlayerObject.GetComponent<PlayerInfo>(); //gets the player info, so we can check it's gold and modify it
 
 
 		shopCopy = Instantiate (mShop); //creates a clone of the shop
@@ -130,7 +130,7 @@ public class Shop2 : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D other) { //checks if you make contact with the shop
-		_PlayerObject.GetComponent<PlayerController> ().canMove = false; //when shop activates  you can't move.
+		PlayerObject.GetComponent<PlayerController> ().canMove = false; //when shop activates  you can't move.
 		shopCopy.SetActive(true);
 		textBox.SetActive (false);//hides the popup
 		mInventory.enabled = false; //disables the inventory while the shop is running.
@@ -155,7 +155,7 @@ public class Shop2 : MonoBehaviour {
 	public void ClosedButton() { //if the closed button is pressed close the shop
 		shopCopy.SetActive(false);
 		mInventory.enabled = true; //enables inventory again
-		_PlayerObject.GetComponent<PlayerController> ().canMove = true; //player can move
+		PlayerObject.GetComponent<PlayerController> ().canMove = true; //player can move
 	}
 
 	public void BuyItem(int nr) { //when one of the buybuttons is pressed
@@ -175,8 +175,8 @@ public class Shop2 : MonoBehaviour {
 
 	public void PressYesButton() { // the inventory is updated with new values.
 		if (mPlayerInfo.gold >= itemList [itemNum + mOffset].itemPrice) {
-			Destroy (_PlayerObject.GetComponent<BaseItem> ());//removes whats currently in the inventory
-			CopyComponent(itemList[itemNum+mOffset], _PlayerObject);//adds the new bought componennt
+			Destroy (PlayerObject.GetComponent<BaseItem> ());//removes whats currently in the inventory
+			CopyComponent(itemList[itemNum+mOffset], PlayerObject);//adds the new bought componennt
 			mPlayerInfo.gold -= itemList [itemNum + mOffset].itemPrice; //takes the money of the player
 			textBox.SetActive (false); //disables the textbox after you click yes
 			shopBox.SetActive (true); //enables the shop again

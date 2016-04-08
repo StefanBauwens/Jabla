@@ -18,17 +18,17 @@ public class TeleportTile : Tiles {
 	//Constructors
 	public TeleportTile()
 	{
-		mType = tileType.Teleport;
+		//mType = tileType.Teleport;
 		mNewXCoordinate = 0f; //eventually change these to Player's current position
 		mNewYCoordinate = 0f;
 	}
 
-	public TeleportTile(bool canWalkThrough, float newXCoordinate, float newYCoordinate) : base(canWalkThrough)
+	/*public TeleportTile(bool canWalkThrough, float newXCoordinate, float newYCoordinate) : base(canWalkThrough)
 	{
-		mType = tileType.Teleport;
+		//mType = tileType.Teleport;
 		mNewXCoordinate = newXCoordinate; 
 		mNewYCoordinate = newYCoordinate;
-	}
+	}*/
 
 	//properties
 	public float NewXCoordinate

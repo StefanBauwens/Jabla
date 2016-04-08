@@ -3,17 +3,17 @@ using System.Collections;
 
 public class Tiles : MonoBehaviour {
 
-	public enum tileType
+	/*public enum tileType
 	{
 		Normal,
 		Teleport,
 		DoorTile,
 		Dangerous
-	}
+	}*/
 
 	public GameObject PlayerObject;
-	public tileType mType;
-	protected bool mCanWalkThrough;//True if the player can walk through this tile
+	//public tileType mType;
+	/*protected bool mCanWalkThrough;//True if the player can walk through this tile
 
 	//Constructors
 	public Tiles()
@@ -62,5 +62,7 @@ public class Tiles : MonoBehaviour {
 		{
 			mType = value;
 		}
-	}
+	}*/
+
+
 }
