@@ -11,6 +11,9 @@ public class Timer : MonoBehaviour
     float countdownTime;
     public TimeMenu timeScreen;
 
+	public int minutes;
+	public int seconds;
+
     
     void Start()
     {
@@ -23,8 +26,8 @@ public class Timer : MonoBehaviour
         
         countdownTime += changeTime/360f;
         //Math.FloorToInt --> number will be rounded down to the nearest integer(afronden)
-        int minutes = Mathf.FloorToInt(countdownTime / 60f);    
-        int seconds = Mathf.FloorToInt(countdownTime - minutes * 60);
+        minutes = Mathf.FloorToInt(countdownTime / 60f);    
+        seconds = Mathf.FloorToInt(countdownTime - minutes * 60);
         
         //display mm:ss format on screen
         string displayTime = string.Format("{0:00}:{1:00}", minutes, seconds);

@@ -27,7 +27,7 @@ public class WorldDraw : MonoBehaviour {
 
 
 	// Use this for initialization
-	void Start () {
+	void Awake () {
 		tileHolder = new GameObject ("Tiles").transform; //empty gameobject to hold all the clones so it stays uncluttered
 		for (int colls = 0; colls < map.GetLength(1); colls++) { //forloop to draw the map
 			for (int rows = 0; rows < map.GetLength(0); rows++) { //colls stands for collumns :P

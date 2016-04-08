@@ -41,6 +41,7 @@ public class Shop2 : Tiles{
 	protected int itemNum;
 	protected int ii;
 	public void Start () {
+		itemList = new List<BaseItem> ();
 		textBox = new GameObject ();
 		shopBox = new GameObject ();
 		mInventory = PlayerObject.GetComponent<Inventory2> (); //gets the inventory from the player
@@ -140,6 +141,8 @@ public class Shop2 : Tiles{
 
 	public void PressButtonDown() { //this method is called when you click the down button
 		if (mOffset+6<=itemList.Count) { //checks if the list is longer
+			Debug.Log(mOffset);
+			Debug.Log (itemList.Count);
 			mOffset++;
 			DrawItemsShop (mOffset); //redraws the shop
 		}
