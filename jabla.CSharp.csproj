@@ -78,7 +78,6 @@
     <Compile Include="Assets\Assets\Scripts\Items\Inventory2.cs" />
     <Compile Include="Assets\Assets\Scripts\Items\Key.cs" />
     <Compile Include="Assets\Assets\Scripts\Items\Potion.cs" />
-    <Compile Include="Assets\Assets\Scripts\Items\Shop2.cs" />
     <Compile Include="Assets\Assets\Scripts\MainMenu.cs" />
     <Compile Include="Assets\Assets\Scripts\PauseMenu.cs" />
     <Compile Include="Assets\Assets\Scripts\PlayerController.cs" />
@@ -88,6 +87,7 @@
     <Compile Include="Assets\Assets\Scripts\TextImporter.cs" />
     <Compile Include="Assets\Assets\Scripts\TileClasses\DangerousTile.cs" />
     <Compile Include="Assets\Assets\Scripts\TileClasses\DoorTile.cs" />
+    <Compile Include="Assets\Assets\Scripts\TileClasses\Shop2.cs" />
     <Compile Include="Assets\Assets\Scripts\TileClasses\TeleportTile.cs" />
     <Compile Include="Assets\Assets\Scripts\TileClasses\Tiles.cs" />
     <Compile Include="Assets\Assets\Scripts\TimeMenu.cs" />
