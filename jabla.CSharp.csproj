@@ -92,6 +92,7 @@
     <Compile Include="Assets\Assets\Scripts\TileClasses\Tiles.cs" />
     <Compile Include="Assets\Assets\Scripts\TimeMenu.cs" />
     <Compile Include="Assets\Assets\Scripts\Timer.cs" />
+    <Compile Include="Assets\Assets\Scripts\WinMenu.cs" />
     <Compile Include="Assets\Assets\Scripts\WorldDraw.cs" />
   </ItemGroup>
   <ItemGroup>
