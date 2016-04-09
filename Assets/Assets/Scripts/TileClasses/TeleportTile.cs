@@ -23,13 +23,6 @@ public class TeleportTile : Tiles {
 		mNewYCoordinate = 0f;
 	}
 
-	/*public TeleportTile(bool canWalkThrough, float newXCoordinate, float newYCoordinate) : base(canWalkThrough)
-	{
-		//mType = tileType.Teleport;
-		mNewXCoordinate = newXCoordinate; 
-		mNewYCoordinate = newYCoordinate;
-	}*/
-
 	//properties
 	public float NewXCoordinate
 	{

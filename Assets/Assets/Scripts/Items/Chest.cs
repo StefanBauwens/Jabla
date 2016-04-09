@@ -15,11 +15,6 @@ public class Chest : Shop2 { //inherits from the shop
 			}
 		}
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
 		
 	override protected void DrawItemsShop(int offset) { //overriding this method so we can remove prices and just place "get" as a chest has only free items.
 		for (int i = 0; i < 5; i++) { 

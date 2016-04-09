@@ -91,18 +91,18 @@ public class Book : BaseItem {
 
 	void DrawPage() { //"draws" the text when you go to next page
 		if (pageNumber == 0) {
-			prevButton.interactable = false;
+			prevButton.interactable = false; //disables the prevbutton if you are at the first page
 		} else {
 			prevButton.interactable = true;
 		}
 
-		if (pageNumber+2 == bookPages.Length) {
+		if (pageNumber+2 == bookPages.Length) { //disables the nextbutton if you're at the last page
 			nextButton.interactable = false;
 		} else {
 			nextButton.interactable = true;
 		}
 			
-		bookPage1.text = bookPages[pageNumber];
+		bookPage1.text = bookPages[pageNumber]; //changes the text on both pages
 		bookPage2.text = bookPages [pageNumber + 1];
 	}
 

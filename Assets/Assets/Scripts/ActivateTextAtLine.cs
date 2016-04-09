@@ -3,7 +3,6 @@ using System.Collections;
 
 public class ActivateTextAtLine : MonoBehaviour {
 
-    //public TextAsset theText;
 	public string[] text;
 
     public int startLine;

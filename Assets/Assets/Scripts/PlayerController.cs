@@ -23,13 +23,6 @@ public class PlayerController : MonoBehaviour {
 	// Update is called once per frame                                                                                       //GetAxisRaw --> methode in Class Input | GetAxisRaw = a key that gets pressed
 	void Update ()                                                                                                           //right > 0.5f, left < -0.5f en 0 = idle (stilstaan) 
 	{
-		/*if (!canMove) //player won't move when there's a dialogue, code won't run under this code
-		{
-			//myRigidbody.isKinematic = true;
-			// i still don't know how to stop the Animator (legs and arms moving)
-			//return;
-		}*/
-
 		if (canMove) { //Edit by stefan: changed it like this so animation stops as well.
 			playerMoving = false;
 			if (Input.GetAxisRaw ("Horizontal") > 0.5f || Input.GetAxisRaw ("Horizontal") < -0.5f)  //moving horizontal (left & right) --> on the x-axis

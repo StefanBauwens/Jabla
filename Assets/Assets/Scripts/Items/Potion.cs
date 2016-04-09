@@ -30,43 +30,22 @@ public class Potion : BaseItem {
 	void Update() {
 		if (this.gameObject == playerObject && alreadyChecked==false) { //check to see if player is carrying the potion
 			Check();
-			alreadyChecked = true;
+			alreadyChecked = true; //only check once else the potions keeps effecting over and over. it only needs to do its damage once.
 		}
 	}
 
 	public void Check() 
     {
-        /*if (types == potionTypes.Timechanger)
-        {
-            TimeDecreaser(Timer.changeTime);
-        }
-        else if (types == potionTypes.Questcompleter)
-        {
-
-        }
-        else if (types == potionTypes.Speed)
-        {
-
-        }*/
-		
 		switch (types) { //use a switch instead
 		case potionTypes.Timechanger:
-			Timer.changeTime -= 3;//= TimeDecreaser (Timer.changeTime);
+			Timer.changeTime -= 3;//changes the time to go faster
 			break;
 		case potionTypes.Questcompleter:
 			//nothing happens lol
 			break;
 		case potionTypes.Speed:
-			playerObject.GetComponent<PlayerController> ().moveSpeed -= 1;
+			playerObject.GetComponent<PlayerController> ().moveSpeed -= 1; //slows you down
 			break;
 		}
-        //Debug.Log(Timer.changeTime);
     }
-
-    /*float TimeDecreaser(float time)
-    {
-        float decreasedTime;
-        decreasedTime = time - 3;
-        return decreasedTime;
-    }*/
 }
