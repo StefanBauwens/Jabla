@@ -15,7 +15,6 @@ public class Shop2 : Tiles{
 	protected int mOffset = 0;
 
 	public GameObject mShop;
-	//public GameObject _PlayerObject;
 
 	protected GameObject shopCopy;
 
@@ -118,11 +117,8 @@ public class Shop2 : Tiles{
 		DrawItemsShop (0);
 		 
 	}
-
-	void Update () {
-	}
-
-	virtual protected void DrawItemsShop(int offset) { //this method draws the items in the shop
+		
+	virtual protected void DrawItemsShop(int offset) { //this method draws the items in the shop //virtual because i overwrite in chest script
 		for (int i = 0; i < 5; i++) { 
 			_shopIcon[i].sprite = itemList[i+offset].itemSprite; 
 			_shopName[i].text = itemList[i+offset].itemName;
