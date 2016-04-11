@@ -45,37 +45,32 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Assets\Scripts\ActivateTextAtLine.cs" />
-     <Compile Include="Assets\Assets\Scripts\BaseCharacters.cs" />
      <Compile Include="Assets\Assets\Scripts\CameraController.cs" />
      <Compile Include="Assets\Assets\Scripts\DeathMenu.cs" />
-     <Compile Include="Assets\Assets\Scripts\Helper.cs" />
      <Compile Include="Assets\Assets\Scripts\Items\BaseItem.cs" />
      <Compile Include="Assets\Assets\Scripts\Items\Book.cs" />
-     <Compile Include="Assets\Assets\Scripts\Items\Chest.cs" />
      <Compile Include="Assets\Assets\Scripts\Items\Inventory2.cs" />
      <Compile Include="Assets\Assets\Scripts\Items\Key.cs" />
      <Compile Include="Assets\Assets\Scripts\Items\Potion.cs" />
      <Compile Include="Assets\Assets\Scripts\MainMenu.cs" />
      <Compile Include="Assets\Assets\Scripts\PauseMenu.cs" />
-     <Compile Include="Assets\Assets\Scripts\PlayerController.cs" />
-     <Compile Include="Assets\Assets\Scripts\PlayerInfo.cs" />
-     <Compile Include="Assets\Assets\Scripts\QuestGivers.cs" />
-     <Compile Include="Assets\Assets\Scripts\Sister.cs" />
-     <Compile Include="Assets\Assets\Scripts\TextBoxManager.cs" />
-     <Compile Include="Assets\Assets\Scripts\TextImporter.cs" />
+     <Compile Include="Assets\Assets\Scripts\Player\PlayerController.cs" />
+     <Compile Include="Assets\Assets\Scripts\Player\PlayerInfo.cs" />
+     <Compile Include="Assets\Assets\Scripts\TileClasses\Chest.cs" />
      <Compile Include="Assets\Assets\Scripts\TileClasses\DangerousTile.cs" />
      <Compile Include="Assets\Assets\Scripts\TileClasses\DoorTile.cs" />
      <Compile Include="Assets\Assets\Scripts\TileClasses\Shop2.cs" />
      <Compile Include="Assets\Assets\Scripts\TileClasses\SpecialDoor.cs" />
      <Compile Include="Assets\Assets\Scripts\TileClasses\TeleportTile.cs" />
      <Compile Include="Assets\Assets\Scripts\TileClasses\Tiles.cs" />
-     <Compile Include="Assets\Assets\Scripts\TimeMenu.cs" />
      <Compile Include="Assets\Assets\Scripts\Timer.cs" />
      <Compile Include="Assets\Assets\Scripts\WorldDraw.cs" />
-     <None Include="Assets\Assets\Text\NPC_Speech.txt" />
-     <None Include="Assets\Assets\Text\Dialog Player.txt" />
-     <None Include="Assets\Assets\Text\NPC2_Speech.txt" />
+     <Compile Include="Assets\Assets\Scripts\characters\ActivateTextAtLine.cs" />
+     <Compile Include="Assets\Assets\Scripts\characters\BaseCharacters.cs" />
+     <Compile Include="Assets\Assets\Scripts\characters\Helper.cs" />
+     <Compile Include="Assets\Assets\Scripts\characters\QuestGivers.cs" />
+     <Compile Include="Assets\Assets\Scripts\characters\Sister.cs" />
+     <Compile Include="Assets\Assets\Scripts\characters\TextBoxManager.cs" />
  <Reference Include="UnityEngine.Networking">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
  </Reference>

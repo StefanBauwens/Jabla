@@ -12,7 +12,6 @@ public class TeleportTile : Tiles {
 	void Start()
 	{
 		PlayerTrans = PlayerObject.GetComponent<Transform> ();
-		//RidgidPlayer = PlayerObject.GetComponent<Rigidbody2D>();
 	}
 
 	//Constructors

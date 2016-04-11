@@ -32,8 +32,8 @@ public class Book : BaseItem {
     }
    
 	void Start() {
-		bookObjectCopy = Instantiate (bookObject);
-		bookObject.SetActive (false);//
+		bookObjectCopy = Instantiate (bookObject); //clones the book ui object
+		bookObject.SetActive (false);
 		bookObjectCopy.SetActive(false);//hides the bookobjects
 		foreach (var item in bookObjectCopy.GetComponentsInChildren<Button>()) { //gets the buttons from the bookObjectcopy
 			if (item.tag == "nextPage") {

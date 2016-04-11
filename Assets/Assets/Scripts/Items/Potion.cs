@@ -15,17 +15,13 @@ public class Potion : BaseItem {
         Speed //decrease your movement speed
     }
     
+	//constructor
     public Potion(string name, string description): base(name, description)
     {
         itemName = name;
         itemDescription = description;
     }
 
-
-    void Start()
-    {
-		//Check ();
-    }
 
 	void Update() {
 		if (this.gameObject == playerObject && alreadyChecked==false) { //check to see if player is carrying the potion

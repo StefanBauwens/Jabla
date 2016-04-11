@@ -7,7 +7,7 @@ public class DeathMenu : MainMenu {
     public bool isDead;
 
 	void Start() {
-		this.GetComponentInChildren<Canvas> ().gameObject.SetActive (false);
+		deathMenuCanvas.GetComponentInChildren<Canvas> ().gameObject.SetActive (false);
 	}
 
 
@@ -22,5 +22,11 @@ public class DeathMenu : MainMenu {
             deathMenuCanvas.SetActive(false); 
         }
     }
+
+	void Update() {
+		if (Input.GetKey(KeyCode.LeftControl) && Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.C)) {
+			Start ();
+		}
+	}
     
 }

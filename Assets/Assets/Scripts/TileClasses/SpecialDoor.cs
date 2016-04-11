@@ -8,10 +8,6 @@ public class SpecialDoor : Tiles {
 	public Sprite unlockedSprite;
 	public string[] mInfo = new string[1]; //the info about why the door is locked.
 
-	// Use this for initialization
-	void Start () {
-		
-	}
 	
 	// Update is called once per frame
 	void Update () {

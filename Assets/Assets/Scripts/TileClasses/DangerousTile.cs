@@ -33,7 +33,7 @@ public class DangerousTile : Tiles { //bv. lava, water, put
 			mDeathMessage = value;
 		}
 	}
-	void Awake()
+	void Start()
 	{
 		PlayerObject = GameObject.FindWithTag ("Player"); //fills Player automatically in
 

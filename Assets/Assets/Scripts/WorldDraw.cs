@@ -6,7 +6,7 @@ public class WorldDraw : MonoBehaviour {
 
 	public Transform[] Prefabs;//array of all the prefabs used to clone whene drawing the map
 
-	private Transform tileHolder;
+	protected Transform tileHolder;
 	private Transform prefab;
 
 	//array map

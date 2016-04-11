@@ -8,8 +8,9 @@ public class Timer : MonoBehaviour
     public Text textTimer;
     public float timeInMinutes;
     public static float changeTime;  //make static so it will be accessible in other Classes
-    float countdownTime;
-    public TimeMenu timeScreen;
+    protected float countdownTime;
+    //public TimeMenu timeScreen;
+	public GameObject timeMenuCanvas;
 
 	public int minutes;
 	public int seconds;
@@ -24,7 +25,7 @@ public class Timer : MonoBehaviour
     {
         countdownTime -= Time.deltaTime;
         
-        countdownTime += changeTime/360f;
+        countdownTime += changeTime/360f; //If you take timepotion then the time goes faster down
         //Math.FloorToInt --> number will be rounded down to the nearest integer(afronden)
         minutes = Mathf.FloorToInt(countdownTime / 60f);    
         seconds = Mathf.FloorToInt(countdownTime - minutes * 60);
@@ -35,8 +36,9 @@ public class Timer : MonoBehaviour
 		        
         if (minutes == 0 && seconds == 0)
         {
-            timeScreen.timeUp = true; // time is up
-            timeScreen.TimeUp(); // calls method TimeUp from class TimeMenu
+			timeMenuCanvas.SetActive(true);
+            /*timeScreen.timeUp = true; // time is up
+            timeScreen.TimeUp(); // calls method TimeUp from class TimeMenu*/
         }        
     }
 }
