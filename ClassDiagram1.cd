@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CameraController" Collapsed="true">
+    <Position X="14" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEiAAAACAAAAAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>Assets\Assets\Scripts\CameraController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ActivateTextAtLine" Collapsed="true">
+    <Position X="12.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAEACAACAgAAAAAAAAAAAgAGAwAEAIAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Assets\Scripts\characters\ActivateTextAtLine.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BaseCharacters" Collapsed="true">
+    <Position X="8.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAACAAAACAAAAAAAAAAJAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Assets\Scripts\characters\BaseCharacters.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Helper" Collapsed="true">
+    <Position X="7.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAQAAAgAACAAAAABAAAAAEAAAEAAAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>Assets\Assets\Scripts\characters\Helper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QuestGivers" Collapsed="true">
+    <Position X="7.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQgAABAACAAAAACBAAAAAAAAEAAAgAAQAAAIAAAACA=</HashCode>
+      <FileName>Assets\Assets\Scripts\characters\QuestGivers.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sister" Collapsed="true">
+    <Position X="9.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAACAAAAAAACAEAAAABAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Assets\Scripts\characters\Sister.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TextBoxManager" Collapsed="true">
+    <Position X="15.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAIAAAACIIAQACAQAABBAAAACQAAAVAAAABAEAAAA=</HashCode>
+      <FileName>Assets\Assets\Scripts\characters\TextBoxManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DeathMenu" Collapsed="true">
+    <Position X="12.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACCAAAAAAAAAIAAAABAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Assets\Scripts\DeathMenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BaseItem" Collapsed="true">
+    <Position X="3" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAABABAAAAAAAAQAAAAgAAAAAEAAiAAAAAAAAA=</HashCode>
+      <FileName>Assets\Assets\Scripts\Items\BaseItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Book" Collapsed="true">
+    <Position X="3" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAYEAAAAoCAAAAACACQAAAAAAAAEAAAAYAAAEAAAAAA=</HashCode>
+      <FileName>Assets\Assets\Scripts\Items\Book.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Inventory2" Collapsed="true">
+    <Position X="15.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AARAAAAAACAEAAAIAAAABAAAAAAAAAAAAAAAAQCAEAA=</HashCode>
+      <FileName>Assets\Assets\Scripts\Items\Inventory2.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Key" Collapsed="true">
+    <Position X="5.25" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Assets\Scripts\Items\Key.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Potion" Collapsed="true">
+    <Position X="0.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABQAAAgAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Assets\Assets\Scripts\Items\Potion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MainMenu" Collapsed="true">
+    <Position X="13.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAAACAAAAAgAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Assets\Scripts\MainMenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PauseMenu" Collapsed="true">
+    <Position X="14.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAAAgAAEAAAAAAQAAABAAAAAAAAIAA=</HashCode>
+      <FileName>Assets\Assets\Scripts\PauseMenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayerController" Collapsed="true">
+    <Position X="12.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgQAAAAAECAgAAAAAAAAAAAAAAAAAAACAQIAAAAAAAA=</HashCode>
+      <FileName>Assets\Assets\Scripts\Player\PlayerController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayerInfo" Collapsed="true">
+    <Position X="14" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Assets\Scripts\Player\PlayerInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Chest" Collapsed="true">
+    <Position X="5.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABACAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Assets\Scripts\TileClasses\Chest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DangerousTile" Collapsed="true">
+    <Position X="0.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAACAAAAAAAAAAAgAAAEAIAAQAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Assets\Scripts\TileClasses\DangerousTile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DoorTile" Collapsed="true">
+    <Position X="3" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAQAAAAAAAAAUEgAAAAAAAAIAAAAAg=</HashCode>
+      <FileName>Assets\Assets\Scripts\TileClasses\DoorTile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Shop2" Collapsed="true">
+    <Position X="5.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQFIBACiChAASCCAKKIAgCAAEAAAAAABAISAAEACAA=</HashCode>
+      <FileName>Assets\Assets\Scripts\TileClasses\Shop2.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpecialDoor" Collapsed="true">
+    <Position X="7.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAEAgAAAAAAAAIAAEAAg=</HashCode>
+      <FileName>Assets\Assets\Scripts\TileClasses\SpecialDoor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TeleportTile" Collapsed="true">
+    <Position X="9.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAEAgAAAAAAAAAAAEAAACBAQAAAAAgACAA=</HashCode>
+      <FileName>Assets\Assets\Scripts\TileClasses\TeleportTile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Tiles" Collapsed="true">
+    <Position X="5.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Assets\Scripts\TileClasses\Tiles.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Timer" Collapsed="true">
+    <Position X="12.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AASAAAAAACBAAAAAgAAAAAAAAAAAAAAAAAAAIQAAQQA=</HashCode>
+      <FileName>Assets\Assets\Scripts\Timer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WorldDraw" Collapsed="true">
+    <Position X="14" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAAAAAAAQAAAJAAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Assets\Scripts\WorldDraw.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

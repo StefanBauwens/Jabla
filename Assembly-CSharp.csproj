@@ -71,6 +71,7 @@
      <Compile Include="Assets\Assets\Scripts\characters\QuestGivers.cs" />
      <Compile Include="Assets\Assets\Scripts\characters\Sister.cs" />
      <Compile Include="Assets\Assets\Scripts\characters\TextBoxManager.cs" />
+     <None Include="Assets\ProjectSettings\ProjectVersion.txt" />
  <Reference Include="UnityEngine.Networking">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
  </Reference>
