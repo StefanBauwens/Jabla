@@ -40,7 +40,7 @@ public class Shop2 : Tiles{
 	protected int itemNum;
 	protected int ii;
 	public void Start () {
-		itemList = new List<BaseItem> ();
+		itemList = new List<BaseItem> (); 
 		textBox = new GameObject ();
 		shopBox = new GameObject ();
 		mInventory = PlayerObject.GetComponent<Inventory2> (); //gets the inventory from the player
